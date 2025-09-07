@@ -1,0 +1,12 @@
+---
+# Add news items as list entries with date and text.
+# Example:
+# - date: 2025-09-06
+#   text: "Launched my academic website and shared preprint on graph sampling."
+
+
+- date: 08-15-2025
+  text: "Glad to start working at OU as an Assistant Professor."
+
+- date: 07-14-2025
+  text: "Attended ICML 2025 and made an oral presentation."
