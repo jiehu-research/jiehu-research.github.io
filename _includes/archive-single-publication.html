@@ -1,0 +1,43 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<li style="margin-bottom: 1em;">
+  {%- comment -%} Authors {%- endcomment -%}
+  {% assign authors_line = nil %}
+  {% if post.authors %}
+    {% assign authors_line = post.authors %}
+  {% elsif post.citation %}
+    {% assign authors_line = post.citation | split: ". (" | first %}
+  {% endif %}
+  {% if authors_line %}
+    {{ authors_line }}<br />
+  {% endif %}
+
+  {%- comment -%} Title and Awards/Presentation {%- endcomment -%}
+  <strong>{{ title }}</strong>
+  {% if post.award or post.presentation %}
+    (<strong><span style="color: red;">{% if post.award %}{{ post.award }}{% endif %}{% if post.award and post.presentation %} — {% endif %}{% if post.presentation %}{{ post.presentation }}{% endif %}</span></strong>)
+  {% endif %}
+  {% if post.paperurl %}
+    [<a href="{{ post.paperurl }}">PDF</a>]
+  {% endif %}
+  <br />
+
+  {%- comment -%} Venue {%- endcomment -%}
+  <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.
+
+  {%- comment -%} Abstract {%- endcomment -%}
+  {% if post.abstract %}
+    <details>
+      <summary style="font-size: 0.8em; cursor: pointer; color: #777;">Abstract</summary>
+      <div style="font-size: 0.9em; margin-top: 0.5rem; border-left: 2px solid #eee; padding-left: 1rem;">
+        {{ post.abstract | markdownify }}
+      </div>
+    </details>
+  {% endif %}
+</li>

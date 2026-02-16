@@ -24,9 +24,18 @@ I am an Assistant Professor in the Department of Computer Science and Engineerin
 ## Selected Publications
 
 {% assign selected_pubs = site.publications | where: "selected", true | sort: "date" | reverse %}
+{% assign last_year = "" %}
 {% for post in selected_pubs %}
-  {% include archive-single.html %}
+  {% assign current_year = post.date | date: "%Y" %}
+  {% if current_year != last_year %}
+    {% if last_year != "" %}</ul>{% endif %}
+    <h3 style="margin-top: 1.5em; color: #1e6b7d;">{{ current_year }}</h3>
+    <ul style="list-style-type: disc; padding-left: 20px;">
+    {% assign last_year = current_year %}
+  {% endif %}
+  {% include archive-single-publication.html %}
 {% endfor %}
+{% if last_year != "" %}</ul>{% endif %}
 
 <p><a href="/publications/">Full Publication List</a></p>
 
