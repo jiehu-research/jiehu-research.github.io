@@ -52,5 +52,4 @@ for file in g:
         print(f"An unhandled exception occurred while processing input {location} with message {ex}")
 
 # Save the map
-m = getorg.orgmap.create_map_obj()
 getorg.orgmap.output_html_cluster_map(location_dict, folder_name="talkmap", hashed_usernames=False)
