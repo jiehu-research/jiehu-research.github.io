@@ -3,6 +3,7 @@
 title: "Accelerating Distributed Stochastic Optimization via Self-Repellent Random Walks"
 authors: '<strong>Jie Hu</strong>, Vishwaraj Doshi, Do Young Eun'
 collection: publications
+selected: true
 category: conferences
 permalink: /publication/2024-accelerating-distributed-stochastic-optimization-via-self-repellent-random-walks
 date: 2024-05-01
