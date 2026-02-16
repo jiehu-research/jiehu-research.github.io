@@ -56,6 +56,8 @@ def html_escape(text):
     """Produce entities within text."""
     return text.replace('&', '&amp;').replace('"', '&quot;').replace("'", '&apos;')
 
+primary_author = "Jie Hu"
+
 
 for pubsource in publist:
     parser = bibtex.Parser()
@@ -103,7 +105,11 @@ for pubsource in publist:
 
             #citation authors - todo - add highlighting for primary author?
             for author in bibdata.entries[bib_id].persons["author"]:
-                citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
+                author_name = author.first_names[0]+" "+author.last_names[0]
+                if author_name == primary_author:
+                    citation = citation+" <b>"+author_name+"</b>, "
+                else:
+                    citation = citation+" "+author_name+", "
 
             #citation title
             citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
