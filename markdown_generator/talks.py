@@ -44,6 +44,13 @@ talks
 # In[4]:
 
 
+html_escape_table = {
+    "&": "&amp;",
+    '"': "&quot;",
+    "'": "&apos;",
+    ">": "&gt;",
+    "<": "&lt;"
+    }
 
 def html_escape(text):
     if type(text) is str:

@@ -3,6 +3,7 @@
 title: "Self-repellent random walks on general graphs-achieving minimal sampling variance via nonlinear Markov chains"
 authors: 'Vishwaraj Doshi, <strong>Jie Hu</strong>, Do Young Eun'
 collection: publications
+selected: true
 category: conferences
 permalink: /publication/2023-self-repellent-random-walks-on-general-graphs-achieving-minimal-sampling-varianc
 date: 2023-07-01

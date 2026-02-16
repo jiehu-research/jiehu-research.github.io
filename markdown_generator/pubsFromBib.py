@@ -44,6 +44,13 @@ publist = {
 }
 
 
+html_escape_table = {
+    "&": "&amp;",
+    '"': "&quot;",
+    "'": "&apos;",
+    ">": "&gt;",
+    "<": "&lt;"
+    }
 
 def html_escape(text):
     """Produce entities within text."""

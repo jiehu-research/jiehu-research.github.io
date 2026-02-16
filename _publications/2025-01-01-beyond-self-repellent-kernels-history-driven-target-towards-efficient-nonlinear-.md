@@ -3,6 +3,7 @@
 title: "Beyond Self-Repellent Kernels: History-Driven Target Towards Efficient Nonlinear MCMC on General Graphs"
 authors: '<strong>Jie Hu</strong>, Yi-Ting Ma, Do Young Eun'
 collection: publications
+selected: true
 category: conferences
 permalink: /publication/2025-beyond-self-repellent-kernels-history-driven-target-towards-efficient-nonlinear-
 date: 2025-07-01
