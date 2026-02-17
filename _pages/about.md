@@ -16,7 +16,9 @@ I am an Assistant Professor in the Department of Computer Science and Engineerin
 <ul>
   {% assign news = site.data.news | sort: 'date' | reverse %}
   {% for item in news limit:5 %}
-    <li><strong>{{ item.date }}</strong>: {{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+    {% assign date_parts = item.date | split: '-' %}
+    {% capture formatted_date %}{{ date_parts[2] }}-{{ date_parts[0] }}-{{ date_parts[1] }}{% endcapture %}
+    <li><strong>{{ formatted_date | date: "%b %Y" }}</strong>: {{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</li>
   {% endfor %}
 </ul>
 <p><a href="/news/">More News</a></p>
@@ -28,9 +30,9 @@ I am an Assistant Professor in the Department of Computer Science and Engineerin
 {% for post in selected_pubs %}
   {% assign current_year = post.date | date: "%Y" %}
   {% if current_year != last_year %}
-    {% if last_year != "" %}</ul>{% endif %}
-    <h3 style="margin-top: 1.5em; color: #1e6b7d;">{{ current_year }}</h3>
-    <ul style="list-style-type: disc; padding-left: 20px;">
+{% if last_year != "" %}</ul>{% endif %}
+<h3 style="margin-top: 1.5em; color: #1e6b7d;">{{ current_year }}</h3>
+<ul style="list-style-type: disc; padding-left: 20px;">
     {% assign last_year = current_year %}
   {% endif %}
   {% include archive-single-publication.html %}
