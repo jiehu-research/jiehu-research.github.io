@@ -28,7 +28,7 @@
 
 # ---------- 2026 ----------
 - title: "Score-Repellent Monte Carlo: Toward Efficient Non-Markovian Sampler with Constant Memory in General State Spaces"
-  authors: "<strong>Jie Hu</strong>"
+  authors: "<strong>Jie Hu</strong>, Lingyun Chen, Geeho Kim, Jinyoung Choi, Bohyung Han, Do Young Eun"
   venue: "International Conference on Machine Learning (ICML)"
   year: 2026
   pdf: "https://arxiv.org/pdf/2604.22948"

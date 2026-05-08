@@ -28,7 +28,6 @@ math: true
 
     <ul class="profile-links">
       {% if site.links.email           != "" %}<li><a href="mailto:{{ site.links.email }}"><span class="link-icon">&#9993;</span> Email</a></li>{% endif %}
-      {% if site.links.cv              != "" %}<li><a href="{{ site.links.cv }}" target="_blank" rel="noopener"><span class="link-icon">&#128196;</span> CV</a></li>{% endif %}
       {% if site.links.google_scholar  != "" %}<li><a href="{{ site.links.google_scholar }}"  target="_blank" rel="noopener"><span class="link-icon">&#127891;</span> Google Scholar</a></li>{% endif %}
       {% if site.links.semantic_scholar!= "" %}<li><a href="{{ site.links.semantic_scholar }}" target="_blank" rel="noopener"><span class="link-icon">&#128221;</span> Semantic Scholar</a></li>{% endif %}
       {% if site.links.dblp            != "" %}<li><a href="{{ site.links.dblp }}"            target="_blank" rel="noopener"><span class="link-icon">&#128218;</span> DBLP</a></li>{% endif %}

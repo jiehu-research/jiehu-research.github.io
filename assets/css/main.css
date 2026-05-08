@@ -460,12 +460,18 @@ html.dark .theme-icon-dark  { display: inline; }
   align-self: flex-start;
   margin: 0;
 }
+/* When OPEN: dissolve the <details> wrapper so its <summary> stays inline
+   with the badges/PDF links, and only the body breaks onto a new row. */
 .pub-abstract[open], .pub-bibtex[open] {
-  flex-basis: 100%;          /* once open, claim a fresh row for the body */
+  display: contents;
+}
+.pub-abstract[open] > .abstract-body,
+.pub-bibtex[open]   > .bibtex-body {
+  flex-basis: 100%;
   margin-top: 6px;
 }
-/* Belt-and-suspenders: when closed, hide everything except the summary pill,
-   so the body never contributes to the flex-item's intrinsic size. */
+/* When CLOSED: hide everything except the summary pill so the hidden body
+   doesn't contribute to the flex-item's intrinsic width. */
 .pub-abstract:not([open]) > :not(summary),
 .pub-bibtex:not([open])   > :not(summary) {
   display: none;
