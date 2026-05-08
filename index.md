@@ -91,18 +91,12 @@ math: true
       </span>
     </div>
 
-    {% assign featured = site.data.publications | where: "featured", true %}
-    {% assign featured_by_year = featured | group_by: "year" | sort: "name" | reverse %}
-    {% for year_group in featured_by_year %}
-      <div class="pub-year-group">
-        <div class="pub-year-label">{{ year_group.name }}</div>
-        <ul class="pub-list">
-          {% for pub in year_group.items %}
-            {% include publication.html pub=pub %}
-          {% endfor %}
-        </ul>
-      </div>
-    {% endfor %}
+    {% assign featured = site.data.publications | where: "featured", true | sort: "year" | reverse %}
+    <ul class="pub-list">
+      {% for pub in featured %}
+        {% include publication.html pub=pub %}
+      {% endfor %}
+    </ul>
 
     <!-- Teaching -->
     <div class="section-header">
