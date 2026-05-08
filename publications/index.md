@@ -2,9 +2,10 @@
 layout: default
 title: Publications
 permalink: /publications/
+math: true
 ---
 
-{% capture edit_link %}https://github.com/{{ site.repository }}/edit/main/_data/publications.yml{% endcapture %}
+{% capture edit_link %}https://github.com/{{ site.repository }}/edit/{{ site.branch | default: "master" }}/_data/publications.yml{% endcapture %}
 
 <div class="page-container">
 

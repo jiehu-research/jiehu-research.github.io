@@ -7,7 +7,7 @@ permalink: /news/
 <div class="page-container">
   <div class="section-header" style="margin-top:0">
     <h1 class="page-title" style="margin-bottom:0;border:none">News</h1>
-    <a class="edit-link" href="https://github.com/{{ site.repository }}/edit/main/_data/news.yml"
+    <a class="edit-link" href="https://github.com/{{ site.repository }}/edit/{{ site.branch | default: "master" }}/_data/news.yml"
        target="_blank" rel="noopener" title="Edit news on GitHub">✎ edit</a>
   </div>
 

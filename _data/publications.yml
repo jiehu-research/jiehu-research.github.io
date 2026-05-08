@@ -33,7 +33,7 @@
   venue: "International Conference on Machine Learning (ICML)"
   year: 2025
   location: "Vancouver, Canada"
-  pdf: "https://openreview.net/pdf?id=0yzOEMbShU"
+  pdf: "https://arxiv.org/pdf/2505.18300"
   abstract: >
     We propose a history-driven target (HDT) framework in MCMC to improve any
     random walk algorithm on discrete state spaces, such as general undirected
@@ -55,7 +55,7 @@
   venue: "Advances in Neural Information Processing Systems (NeurIPS)"
   year: 2024
   location: "Vancouver, Canada"
-  pdf: "https://proceedings.neurips.cc/paper_files/paper/2024/file/852f50969a9e523ec41d26f2f68bd456-Paper-Conference.pdf"
+  pdf: "https://arxiv.org/pdf/2409.17499"
   abstract: >
     We conduct an asymptotic analysis of Unified Distributed SGD (UD-SGD)
     spanning decentralized SGD, local SGD, and Federated Learning patterns,
@@ -71,7 +71,7 @@
   venue: "International Conference on Learning Representations (ICLR)"
   year: 2024
   location: "Vienna, Austria"
-  pdf: "https://openreview.net/pdf?id=BV1PHbTJzd"
+  pdf: "https://arxiv.org/pdf/2401.09665"
   abstract: >
     We replace the standard linear Markovian token in random-walk-based distributed
     SGD by a Self-Repellent Random Walk (SRRW) - a nonlinear Markov chain that is
@@ -88,7 +88,7 @@
   venue: "International Conference on Artificial Intelligence and Statistics (AISTATS)"
   year: 2024
   location: "Valencia, Spain"
-  pdf: "https://proceedings.mlr.press/v238/hu24b/hu24b.pdf"
+  pdf: "https://arxiv.org/pdf/2401.09339"
   abstract: >
     We conduct an in-depth asymptotic analysis of Two-Timescale Stochastic
     Approximation (TTSA) under controlled Markovian noise via central limit
@@ -103,7 +103,7 @@
   venue: "International Conference on Machine Learning (ICML)"
   year: 2023
   location: "Honolulu, HI"
-  pdf: "https://proceedings.mlr.press/v202/doshi23a/doshi23a.pdf"
+  pdf: "https://arxiv.org/pdf/2305.05097"
   abstract: >
     We design a self-repellent random walk (SRRW) parameterized by alpha > 0 that is
     less likely to transition to highly visited nodes. We prove almost-sure
@@ -121,7 +121,7 @@
   venue: "Advances in Neural Information Processing Systems (NeurIPS)"
   year: 2022
   location: "New Orleans, LA"
-  pdf: "https://proceedings.neurips.cc/paper_files/paper/2022/file/65ccdfe02045fa0b823c5fa7ffd56b66-Paper-Conference.pdf"
+  pdf: "https://arxiv.org/pdf/2209.07446"
   abstract: >
     We employ the notion of efficiency ordering - well-analyzed for MCMC samplers -
     for SGD algorithms via Loewner ordering of asymptotic covariance matrices. We
@@ -135,7 +135,7 @@
   venue: "IEEE Conference on Decision and Control (CDC)"
   year: 2022
   location: "Cancun, Mexico"
-  pdf: "https://par.nsf.gov/servlets/purl/10467890"
+  pdf: "https://arxiv.org/pdf/2209.07304"
   abstract: >
     We consider two SIS-type viruses competing over overlaid graphs and provide
     the first quantitative analysis of non-trivial coexistence equilibria, proving
@@ -147,7 +147,7 @@
   authors: "<strong>Jie Hu</strong>, Vishwaraj Doshi, Do Young Eun"
   venue: "IEEE Transactions on Mobile Computing"
   year: 2022
-  pdf: "https://par.nsf.gov/servlets/purl/10467896"
+  pdf: "https://arxiv.org/pdf/2210.02557"
   abstract: >
     We explicitly minimize file-transfer time over heterogeneous-rate Bernoulli
     channels in the OSA model - showing that max-throughput policy does not
@@ -161,7 +161,7 @@
   venue: "International Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks (WiOpt)"
   year: 2021
   location: "Philadelphia, PA"
-  pdf: "https://par.nsf.gov/servlets/purl/10300206"
+  pdf: "https://arxiv.org/pdf/2109.11624"
   abstract: >
     We show that maximizing long-term throughput in Opportunistic Spectrum Access
     does not minimize file transfer time in general - especially for small files -

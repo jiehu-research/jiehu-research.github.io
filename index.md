@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Home
+math: true
 ---
 
-{% capture edit_base %}https://github.com/{{ site.repository }}/edit/main{% endcapture %}
+{% capture edit_base %}https://github.com/{{ site.repository }}/edit/{{ site.branch | default: "master" }}{% endcapture %}
 
 <div class="home-layout">
 
@@ -30,6 +31,7 @@ title: Home
       {% if site.links.cv              != "" %}<li><a href="{{ site.links.cv }}" target="_blank" rel="noopener"><span class="link-icon">&#128196;</span> CV</a></li>{% endif %}
       {% if site.links.google_scholar  != "" %}<li><a href="{{ site.links.google_scholar }}"  target="_blank" rel="noopener"><span class="link-icon">&#127891;</span> Google Scholar</a></li>{% endif %}
       {% if site.links.semantic_scholar!= "" %}<li><a href="{{ site.links.semantic_scholar }}" target="_blank" rel="noopener"><span class="link-icon">&#128221;</span> Semantic Scholar</a></li>{% endif %}
+      {% if site.links.dblp            != "" %}<li><a href="{{ site.links.dblp }}"            target="_blank" rel="noopener"><span class="link-icon">&#128218;</span> DBLP</a></li>{% endif %}
       {% if site.links.orcid           != "" %}<li><a href="{{ site.links.orcid }}"           target="_blank" rel="noopener"><span class="link-icon">&#128300;</span> ORCID</a></li>{% endif %}
       {% if site.links.github          != "" %}<li><a href="{{ site.links.github }}"          target="_blank" rel="noopener"><span class="link-icon">&#9881;</span> GitHub</a></li>{% endif %}
       {% if site.links.linkedin        != "" %}<li><a href="{{ site.links.linkedin }}"        target="_blank" rel="noopener"><span class="link-icon">&#128188;</span> LinkedIn</a></li>{% endif %}

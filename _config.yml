@@ -10,6 +10,7 @@ description: "Research on machine learning theory, distributed optimization, and
 baseurl:     ""
 url:         "https://jiehu-research.github.io"
 repository:  "jiehu-research/jiehu-research.github.io"
+branch:      "master"   # branch GitHub Pages serves from (used for the "edit on GitHub" links)
 
 # EDIT  About you
 author:
@@ -29,6 +30,7 @@ links:
   email:            "jiehu@oakland.edu"
   google_scholar:   "https://scholar.google.com/citations?hl=en&user=WrXZ9NMAAAAJ"
   semantic_scholar: "https://www.semanticscholar.org/author/Jie-Hu/2279761166"
+  dblp:             "https://dblp.org/pid/90/5064-27.html"
   orcid:            "https://orcid.org/0000-0002-0165-3738"
   github:           "https://github.com/jiehu-research"
   linkedin:         ""

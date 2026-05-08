@@ -14,7 +14,7 @@ math: true
       {% endif %}
       {% if site.repository and page.path %}
         <span>&middot;</span>
-        <a class="edit-link" href="https://github.com/{{ site.repository }}/edit/main/{{ page.path }}"
+        <a class="edit-link" href="https://github.com/{{ site.repository }}/edit/{{ site.branch | default: "master" }}/{{ page.path }}"
            target="_blank" rel="noopener">&#9998; edit on GitHub</a>
       {% endif %}
     </div>

@@ -7,7 +7,7 @@
       {% if site.links.github != "" %} · <a href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
       · <a href="/feed.xml" target="_blank" rel="noopener">RSS</a>
       {% if site.repository %}
-      · <a href="https://github.com/{{ site.repository }}/edit/main{{ page.path | default: 'index.md' | prepend: '/' }}" target="_blank" rel="noopener" title="Edit this page on GitHub">Edit page</a>
+      · <a href="https://github.com/{{ site.repository }}/edit/{{ site.branch | default: "master" }}{{ page.path | default: 'index.md' | prepend: '/' }}" target="_blank" rel="noopener" title="Edit this page on GitHub">Edit page</a>
       {% endif %}
     </p>
   </div>
