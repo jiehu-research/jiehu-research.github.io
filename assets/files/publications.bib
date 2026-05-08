@@ -1,0 +1,93 @@
+@inproceedings{hu2022efficiency,
+  title={Efficiency ordering of stochastic gradient descent},
+  author={Hu, Jie, Doshi, Vishwaraj and Eun, Do Young},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2022},
+  url={https://proceedings.neurips.cc/paper_files/paper/2022/file/65ccdfe02045fa0b823c5fa7ffd56b66-Paper-Conference.pdf},
+  abstract={We consider the stochastic gradient descent (SGD) algorithm driven by a general stochastic sequence, including i.i.d noise and random walk on an arbitrary graph, among others; and analyze it in the asymptotic sense. Specifically, we employ the notion of `efficiency ordering', a well-analyzed tool for comparing the performance of Markov Chain Monte Carlo (MCMC) samplers, for SGD algorithms in the form of Loewner ordering of covariance matrices associated with the scaled iterate errors in the long term. Using this ordering, we show that input sequences that are more efficient for MCMC sampling also lead to smaller covariance of the errors for SGD algorithms in the limit. This also suggests that an arbitrarily weighted MSE of SGD iterates in the limit becomes smaller when driven by more efficient chains. Our finding is of particular interest in applications such as decentralized optimization and swarm learning, where SGD is implemented in a random walk fashion on the underlying communication graph for cost issues and/or data privacy. We demonstrate how certain non-Markovian processes, for which typical mixing-time based non-asymptotic bounds are intractable, can outperform their Markovian counterparts in the sense of efficiency ordering for SGD. We show the utility of our method by applying it to gradient descent with shuffling and mini-batch gradient descent, reaffirming key results from existing literature under a unified framework. Empirically, we also observe efficiency ordering for variants of SGD such as accelerated SGD and Adam, open up the possibility of extending our notion of efficiency ordering to a broader family of stochastic optimization algorithms.}
+}
+
+@inproceedings{doshi2023self,
+  title={Self-repellent random walks on general graphs-achieving minimal sampling variance via nonlinear Markov chains},
+  author={Doshi, Vishwaraj, Hu, Jie and Eun, Do Young},
+  booktitle={International Conference on Machine Learning},
+  year={2023},
+  url={https://proceedings.mlr.press/v202/doshi23a/doshi23a.pdf},
+  abstract={We consider random walks on discrete state spaces, such as general undirected graphs, where the random walkers are designed to approximate a target quantity over the network topology via sampling and neighborhood exploration in the form of Markov chain Monte Carlo (MCMC) procedures. Given any Markov chain corresponding to a target probability distribution, we design a self-repellent random walk (SRRW) which is less likely to transition to nodes that were highly visited in the past, and more likely to transition to seldom visited nodes. For a class of SRRWs parameterized by a positive real α, we prove that the empirical distribution of the process converges almost surely to the the target (stationary) distribution of the underlying Markov chain kernel. We then provide a central limit theorem and derive the exact form of the arising asymptotic co-variance matrix, which allows us to show that the SRRW with a stronger repellence (larger α) always achieves a smaller asymptotic covariance, in the sense of Loewner ordering of co-variance matrices. Especially for SRRW-driven MCMC algorithms, we show that the decrease in the asymptotic sampling variance is of the order O(1/α), eventually going down to zero. Finally, we provide numerical simulations complimentary to our theoretical results, also empirically testing a version of SRRW with α increasing in time to combine the benefits of smaller asymptotic variance due to large α, with empirically observed faster mixing properties of SRRW with smaller α.}
+}
+
+@inproceedings{hu2024does,
+  title={Does Worst-Performing Agent Lead the Pack? Analyzing Agent Dynamics in Unified Distributed SGD},
+  author={Hu, Jie, Ma, Yi-Ting and Eun, Do Young},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2024},
+  url={https://proceedings.neurips.cc/paper_files/paper/2024/file/852f50969a9e523ec41d26f2f68bd456-Paper-Conference.pdf},
+  abstract={Distributed learning is essential to train machine learning algorithms across heterogeneous agents while maintaining data privacy. We conduct an asymptotic analysis of Unified Distributed SGD (UD-SGD), exploring a variety of communication patterns, including decentralized SGD and local SGD within Federated Learning (FL), as well as the increasing communication interval in the FL setting. In this study, we assess how different sampling strategies, such as iid sampling, shuffling, and Markovian sampling, affect the convergence speed of UD-SGD by considering the impact of agent dynamics on the limiting covariance matrix as described in the Central Limit Theorem (CLT). Our findings not only support existing theories on linear speedup and asymptotic network independence, but also theoretically and empirically show how efficient sampling strategies employed by individual agents contribute to overall convergence in UD-SGD. Simulations reveal that a few agents using highly efficient sampling can achieve or surpass the performance of the majority employing moderately improved strategies, providing new insights beyond traditional analyses focusing on the worst-performing agent.}
+}
+
+@inproceedings{cao2020performance,
+  title={Performance analysis and improvement on DSRC application for V2V communication},
+  author={Cao, Liu, Yin, Hao, Hu, Jie and Zhang, Lyutianyang},
+  booktitle={IEEE Vehicular Technology Conference (VTC2020-Fall)},
+  year={2020},
+  organization={IEEE},
+  url={https://arxiv.org/pdf/2102.07023},
+  abstract={In this paper, we focus on the performance of vehicle-to-vehicle (V2V) communication adopting the Dedicated Short Range Communication (DSRC) application in periodic broadcast mode. An analytical model is studied and a fixed point method is used to analyze the packet delivery ratio (PDR) and mean delay based on the IEEE 802.11p standard in a fully connected network under the assumption of perfect PHY performance. With the characteristics of V2V communication, we develop the Semi-persistent Contention Density Control (SpCDC) scheme to improve the DSRC performance. We use Monte Carlo simulation to verify the results obtained by the analytical model. The simulation results show that the packet delivery ratio in SpCDC scheme increases more than 10% compared with IEEE 802.11p in heavy vehicle load scenarios. Meanwhile, the mean reception delay decreases more than 50%, which provides more reliable road safety.}
+}
+
+@inproceedings{pmlr-v238-hu24b,
+  title = 	 {Central Limit Theorem for Two-Timescale Stochastic Approximation with {M}arkovian Noise: Theory and Applications},
+  author =       {Hu, Jie, Doshi, Vishwaraj and Eun, Do Young},
+  booktitle = 	 {International Conference on Artificial Intelligence and Statistics},
+  year = 	 {2024},
+  url = 	 {https://proceedings.mlr.press/v238/hu24b/hu24b.pdf},
+  abstract = 	 {Two-timescale stochastic approximation (TTSA) is among the most general frameworks for iterative stochastic algorithms. This includes well-known stochastic optimization methods such as SGD variants and those designed for bilevel or minimax problems, as well as reinforcement learning like the family of gradient-based temporal difference (GTD) algorithms. In this paper, we conduct an in-depth asymptotic analysis of TTSA under controlled Markovian noise via central limit theorem (CLT), uncovering the coupled dynamics of TTSA influenced by the underlying Markov chain, which has not been addressed by previous CLT results of TTSA only with Martingale difference noise. Building upon our CLT, we expand its application horizon of efficient sampling strategies from vanilla SGD to a wider TTSA context in distributed learning, thus broadening the scope of Hu et al. 2020. In addition, we leverage our CLT result to deduce the statistical properties of GTD algorithms with nonlinear function approximation using Markovian samples and show their identical asymptotic performance, a perspective not evident from current finite-time bounds.}
+}
+
+@inproceedings{hu2024accelerating,
+  title={Accelerating Distributed Stochastic Optimization via Self-Repellent Random Walks},
+  author={Hu, Jie, Doshi, Vishwaraj and Eun, Do Young},
+  booktitle={International Conference on Learning Representations},
+  year={2024},
+  url={https://openreview.net/pdf?id=BV1PHbTJzd},
+  abstract={We study a family of distributed stochastic optimization algorithms where gradients are sampled by a token traversing a network of agents in random-walk fashion. Typically, these random-walks are chosen to be Markov chains that asymptotically sample from a desired target distribution, and play a critical role in the convergence of the optimization iterates. In this paper, we take a novel approach by replacing the standard linear Markovian token by one which follows a nonlinear Markov chain - namely the Self-Repellent Radom Walk (SRRW). Defined for any given 'base' Markov chain, the SRRW, parameterized by a positive scalar {\alpha}, is less likely to transition to states that were highly visited in the past, thus the name. In the context of MCMC sampling on a graph, a recent breakthrough in Doshi et al. (2023) shows that the SRRW achieves O(1/{\alpha}) decrease in the asymptotic variance for sampling. We propose the use of a 'generalized' version of the SRRW to drive token algorithms for distributed stochastic optimization in the form of stochastic approximation, termed SA-SRRW. We prove that the optimization iterate errors of the resulting SA-SRRW converge to zero almost surely and prove a central limit theorem, deriving the explicit form of the resulting asymptotic covariance matrix corresponding to iterate errors. This asymptotic covariance is always smaller than that of an algorithm driven by the base Markov chain and decreases at rate O(1/{\alpha}^2) - the performance benefit of using SRRW thereby amplified in the stochastic optimization context. Empirical results support our theoretical findings.}
+}
+
+@inproceedings{doshi2022bi,
+  title={Bi-sis epidemics on graphs-quantitative analysis of coexistence equilibria},
+  author={Doshi, Vishwaraj, Hu, Jie and Eun, Do Young},
+  booktitle={IEEE Conference on Decision and Control},
+  year={2022},
+  url={https://par.nsf.gov/servlets/purl/10467890},
+  abstract={We consider a system in which two viruses of the Susceptible-Infected-Susceptible (SIS) type compete over general, overlaid graphs. While such systems have been the focus of many recent works, they have mostly been studied in the sense of convergence analysis, with no existing results quantifying the non-trivial coexistence equilibria (CE) - that is, when both competing viruses maintain long term presence over the network. In this paper, we prove monotonicity of the CE with respect to effective infection rates of the two viruses, and provide the first quantitative analysis of such equilibria in the form of upper bounds involving spectral radii of the underlying graphs, as well as positive equilibria of related single-virus systems. Our results provide deeper insight into how the long term infection probabilities are affected by system parameters, which we further highlight via numerical results.}
+}
+
+@article{hu2022minimizing,
+  title={Minimizing File Transfer Time in Opportunistic Spectrum Access Model},
+  author={Hu, Jie, Doshi, Vishwaraj and Eun, Do Young},
+  journal={IEEE Transactions on Mobile Computing},
+  volume={23},
+  number={1},
+  pages={630--644},
+  year={2022},
+  url={https://par.nsf.gov/servlets/purl/10467896},
+  abstract={We study the file transfer problem in opportunistic spectrum access (OSA) model, which has been widely studied in throughput-oriented applications for max-throughput strategies and in delay-related works that commonly assume identical channel rates and fixed file sizes. Our work explicitly considers minimizing the file transfer time for a given file in a set of heterogeneous-rate Bernoulli channels, showing that max-throughput policy doesn't minimize file transfer time in general. We formulate a mathematical framework for static extend to dynamic policies by mapping our file transfer problem to a stochastic shortest path problem. We analyze the performance of our proposed static and dynamic optimal policies over the max-throughput policy. We propose a mixed-integer programming formulation as an efficient alternative way to obtain the dynamic optimal policy and show a huge reduction in computation time. Then, we propose a heuristic policy that takes into account the performance-complexity tradeoff and consider the online implementation with unknown channel parameters. Furthermore, we present numerical simulations to support our analytical results and discuss the effect of switching delay on different policies. Finally, we extend the file transfer problem to Markovian channels and demonstrate the impact of the correlation of each channel.}
+}
+
+@inproceedings{hu2021opportunistic,
+  title={Opportunistic Spectrum Access: Does Maximizing Throughput Minimize File Transfer Time?},
+  author={Hu, Jie, Doshi, Vishwaraj and Eun, Do Young},
+  booktitle={International Symposium on Modeling and Optimization in Mobile Ad Hoc and Wireless Networks},
+  year={2021},
+  url={https://par.nsf.gov/servlets/purl/10300206},
+  abstract={The Opportunistic Spectrum Access (OSA) model has been developed for the secondary users (SUs) to exploit the stochastic dynamics of licensed channels for file transfer in an opportunistic manner. Common approaches to design channel sensing strategies for throughput-oriented applications tend to maximize the long-term throughput, with the hope that it provides reduced file transfer time as well. In this paper, we show that this is not correct in general, especially for small files. Unlike prior delay-related works that seldom consider the heterogeneous channel rate and bursty incoming packets, our work explicitly considers minimizing the file transfer time of a single file consisting of multiple packets in a set of heterogeneous channels. We formulate a mathematical framework for the static policy, and extend to dynamic policy by mapping our file transfer problem to the stochastic shortest path problem. We analyze the performance of our proposed static optimal and dynamic optimal policies over the policy that maximizes long-term throughput. We then propose a heuristic policy that takes into account the performance-complexity tradeoff and an extension to online implementation with unknown channel parameters, and also present the regret bound for our online algorithm. We also present numerical simulations that reflect our analytical results.}
+}
+
+@inproceedings{hu2025beyond,
+  title={Beyond Self-Repellent Kernels: History-Driven Target Towards Efficient Nonlinear MCMC on General Graphs},
+  author={Hu, Jie and Ma, Yi-Ting and Eun, Do Young},
+  booktitle={International Conference on Machine Learning},
+  url={https://openreview.net/pdf?id=0yzOEMbShU},
+  year={2025},
+  abstract={We propose a history-driven target (HDT) framework in Markov Chain Monte Carlo (MCMC) to improve any random walk algorithm on discrete state spaces, such as general undirected graphs, for efficient sampling from target distribution $\boldsymbol{\mu}$. With broad applications in network science and distributed optimization, recent innovations like the self-repellent random walk (SRRW) achieve near-zero variance by prioritizing under-sampled states through transition kernel modifications based on past visit frequencies. However, SRRW's reliance on explicit computation of transition probabilities for all neighbors at each step introduces substantial computational overhead, while its strict dependence on time-reversible Markov chains excludes advanced non-reversible MCMC methods. To overcome these limitations, instead of direct modification of transition kernel, HDT introduces a history-dependent target distribution $\boldsymbol{\pi}[\mathbf{x}]$ to replace the original target $\boldsymbol{\mu}$ in any graph sampler, where $\mathbf{x}$ represents the empirical measure of past visits. This design preserves lightweight implementation by requiring only local information between the current and proposed states and achieves compatibility with both reversible and non-reversible MCMC samplers, while retaining unbiased samples with target distribution $\boldsymbol{\mu}$ and near-zero variance performance. Extensive experiments in graph sampling demonstrate consistent performance gains, and a memory-efficient Least Recently Used (LRU) cache ensures scalability to large general graphs.}
+}

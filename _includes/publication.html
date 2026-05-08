@@ -1,0 +1,47 @@
+{% comment %}
+  Renders a single publication card.
+  Caller must pass `pub` (one entry from site.data.publications).
+{% endcomment %}
+<li class="pub-item">
+  <div class="pub-title">
+    {% if include.pub.pdf %}
+      <a href="{{ include.pub.pdf }}" target="_blank" rel="noopener">{{ include.pub.title }}</a>
+    {% elsif include.pub.arxiv %}
+      <a href="{{ include.pub.arxiv }}" target="_blank" rel="noopener">{{ include.pub.title }}</a>
+    {% else %}
+      {{ include.pub.title }}
+    {% endif %}
+  </div>
+  <div class="pub-authors">{{ include.pub.authors }}</div>
+  <div class="pub-venue">
+    <em>{{ include.pub.venue }}</em>{% if include.pub.location %}, {{ include.pub.location }}{% endif %}, {{ include.pub.year }}.
+  </div>
+  <div class="pub-badges">
+    {% for badge in include.pub.badges %}
+      {% if badge == "oral"      %}<span class="badge badge-oral">Oral</span>
+      {% elsif badge == "spotlight" %}<span class="badge badge-spotlight">Spotlight</span>
+      {% elsif badge.award       %}<span class="badge badge-award">🏆 {{ badge.award }}</span>
+      {% else                    %}<span class="badge badge-default">{{ badge }}</span>
+      {% endif %}
+    {% endfor %}
+
+    {% if include.pub.pdf    %}<a class="pub-link" href="{{ include.pub.pdf    }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+    {% if include.pub.arxiv  %}<a class="pub-link" href="{{ include.pub.arxiv  }}" target="_blank" rel="noopener">arXiv</a>{% endif %}
+    {% if include.pub.code   %}<a class="pub-link" href="{{ include.pub.code   }}" target="_blank" rel="noopener">Code</a>{% endif %}
+    {% if include.pub.slides %}<a class="pub-link" href="{{ include.pub.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+
+    {% if include.pub.abstract %}
+      <details class="pub-abstract">
+        <summary>Abstract</summary>
+        <div class="abstract-body">{{ include.pub.abstract | markdownify }}</div>
+      </details>
+    {% endif %}
+
+    {% if include.pub.bibtex %}
+      <details class="pub-bibtex">
+        <summary>BibTeX</summary>
+        <pre class="bibtex-body"><code>{{ include.pub.bibtex }}</code></pre>
+      </details>
+    {% endif %}
+  </div>
+</li>

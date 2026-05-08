@@ -1,0 +1,30 @@
+---
+layout: default
+math: true
+---
+<article class="page-container post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}<p class="page-subtitle">{{ page.description }}</p>{% endif %}
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.tags.size > 0 %}
+        <span>&middot;</span>
+        {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      {% endif %}
+      {% if site.repository and page.path %}
+        <span>&middot;</span>
+        <a class="edit-link" href="https://github.com/{{ site.repository }}/edit/main/{{ page.path }}"
+           target="_blank" rel="noopener">&#9998; edit on GitHub</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer" style="margin-top:48px;padding-top:24px;border-top:1px solid var(--border)">
+    <a href="{{ '/blog/' | prepend: site.baseurl }}" class="section-more">&larr; All posts</a>
+  </footer>
+</article>

@@ -1,20 +1,13 @@
-# Ignore the contents of the _site directory and other cache directories
 _site/
 .sass-cache/
-
-# Ignore the directory for local files during development
-local/
-
-# Ignore the Gemfile that is generated
+.jekyll-cache/
+.jekyll-metadata
+vendor/
 Gemfile.lock
+*.py[cod]
+__pycache__/
+.DS_Store
+Thumbs.db
 
-# Ignore files created by npm
-node_modules
-package-lock.json
-
-# Ignore the vendor file at root level and bundle for alternative installation
-/vendor/
-.bundle/
-
-# Ignore folders related to IDEs
-.vscode/
+# import-bib produces a temporary preview file
+_data/publications.imported.yml

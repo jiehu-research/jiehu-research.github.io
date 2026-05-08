@@ -1,32 +1,13 @@
----
-layout: compress
----
-
-{% include base_path %}
-
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [ ["$","$"], ["\\(","\\)"] ],processEscapes: true}});</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
 </head>
-
-  <body>
-
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
+<body>
+  {% include nav.html %}
+  <main class="main-content">
     {{ content }}
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
-  </body>
+  </main>
+  {% include footer.html %}
+</body>
 </html>

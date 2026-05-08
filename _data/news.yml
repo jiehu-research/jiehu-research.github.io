@@ -1,12 +1,24 @@
----
-# Add news items as list entries with date and text.
-# Example:
-# - date: 2025-09-06
-#   text: "Launched my academic website and shared preprint on graph sampling."
+# =============================================================
+#  News  —  newest at the top
+# -------------------------------------------------------------
+#  Schema:
+#    - date: "Mon YYYY"          # display date, free-form (e.g. "Aug 2025")
+#      sort: "2025-08-15"        # ISO date for accurate sorting (optional but recommended)
+#      text: "What happened."    # markdown allowed: **bold**, *italic*, [link](url)
+#      link: "https://..."       # optional explicit link button
+#
+#  Pro-tip:
+#    Run  `python tools/edit.py add-news`  for an interactive helper that
+#    prepends a properly-formatted entry.
+# =============================================================
 
+- date: "Aug 2025"
+  sort: "2025-08-15"
+  text: "Joined Oakland University as Assistant Professor in the Department of Computer Science and Engineering."
 
-- date: 08-15-2025
-  text: "Glad to start working at OU as an Assistant Professor."
+- date: "Jul 2025"
+  sort: "2025-07-14"
+  text: "Attended **ICML 2025** in Vancouver and gave an *oral presentation* on our paper *History-Driven Target for Nonlinear MCMC*."
+  link: "https://icml.cc/virtual/2025/poster/0yzOEMbShU"
 
-- date: 07-14-2025
-  text: "Attended ICML 2025 and made an oral presentation."
+# ---- Add new entries above this line ----

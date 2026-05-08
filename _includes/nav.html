@@ -1,0 +1,26 @@
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="{{ '/' | prepend: site.baseurl }}">{{ site.author.name }}</a>
+
+    <button class="nav-toggle" aria-label="Toggle menu"
+            onclick="this.closest('nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="{{ '/'              | prepend: site.baseurl }}"{% if page.url == '/' %} class="active"{% endif %}>About</a></li>
+      <li><a href="{{ '/publications/' | prepend: site.baseurl }}"{% if page.url contains '/publications' %} class="active"{% endif %}>Publications</a></li>
+      <li><a href="{{ '/blog/'         | prepend: site.baseurl }}"{% if page.url contains '/blog' %} class="active"{% endif %}>Blog</a></li>
+      {% if site.links.cv != "" %}
+      <li><a href="{{ site.links.cv }}" target="_blank" rel="noopener">CV</a></li>
+      {% endif %}
+      <li>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"
+                onclick="(function(){var d=document.documentElement.classList.toggle('dark');try{localStorage.setItem('theme',d?'dark':'light');}catch(e){}})()">
+          <span class="theme-icon-light">&#9728;</span>
+          <span class="theme-icon-dark">&#9790;</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>

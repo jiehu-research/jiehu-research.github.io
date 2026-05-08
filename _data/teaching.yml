@@ -1,0 +1,22 @@
+# =============================================================
+#  Teaching  —  newest term first.  Shown on the homepage only.
+# -------------------------------------------------------------
+#  Schema:
+#    - code:  "CSI 2470"
+#      title: "Introduction to Computer Networks"
+#      term:  "Fall 2025"
+#      url:   ""    # optional syllabus / Moodle link
+#      role:  ""    # optional, e.g. "Instructor" / "Co-instructor" — defaults to Instructor
+# =============================================================
+
+- code:  "CSI 2560"
+  title: "Computational Linear Algebra"
+  term:  "Winter 2026"
+  url:   ""
+
+- code:  "CSI 2470"
+  title: "Introduction to Computer Networks"
+  term:  "Fall 2025"
+  url:   ""
+
+# ---- Add new courses above ----
