@@ -47,8 +47,8 @@ math: true
       <a href="{{ site.author.department_url }}" target="_blank" rel="noopener">{{ site.author.department }}</a>
       at <a href="{{ site.author.university_url }}" target="_blank" rel="noopener">{{ site.author.university }}</a>,
       based in {{ site.author.location }}. My research focuses on
-      <strong>machine learning theory</strong>, <strong>distributed optimization</strong>,
-      and <strong>graph sampling</strong>. In particular, I design efficient algorithms
+      machine learning theory, distributed optimization,
+      and graph sampling. In particular, I design efficient algorithms
       grounded in applied probability and Markov chain theory &mdash; pushing the boundaries
       of how quickly and effectively learning tasks can be performed over networks.
     </p>
@@ -116,10 +116,7 @@ math: true
       <li class="teaching-item">
         <span>
           <span class="teaching-code">{{ course.code }}</span>
-          <span class="teaching-course">
-            {% if course.url %}<a href="{{ course.url }}" target="_blank" rel="noopener">{{ course.title }}</a>
-            {% else %}{{ course.title }}{% endif %}
-          </span>
+          <span class="teaching-course">{{ course.title }}</span>
         </span>
         <span class="teaching-term">{{ course.term }}</span>
       </li>

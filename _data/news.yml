@@ -1,9 +1,9 @@
 # =============================================================
-#  News  —  newest at the top
+#  News  -  newest at the top
 # -------------------------------------------------------------
 #  Schema:
 #    - date: "Mon YYYY"          # display date, free-form (e.g. "Aug 2025")
-#      sort: "2025-08-15"        # ISO date for accurate sorting (optional but recommended)
+#      sort: "2025-08-15"        # ISO date for accurate sorting (optional)
 #      text: "What happened."    # markdown allowed: **bold**, *italic*, [link](url)
 #      link: "https://..."       # optional explicit link button
 #
@@ -11,6 +11,19 @@
 #    Run  `python tools/edit.py add-news`  for an interactive helper that
 #    prepends a properly-formatted entry.
 # =============================================================
+
+- date: "Apr 2026"
+  sort: "2026-04-15"
+  text: "Our paper *Score-Repellent Monte Carlo: Toward Efficient Non-Markovian Sampler with Constant Memory in General State Spaces* was accepted at **ICML 2026** as a **Spotlight**!"
+  link: "https://arxiv.org/pdf/2604.22948"
+
+- date: "Feb 2026"
+  sort: "2026-02-01"
+  text: "Awarded the **2026 URC Faculty Research Fellowship** ($10K) from Oakland University to support research on efficient sampling and distributed learning."
+
+- date: "Oct 2025"
+  sort: "2025-10-15"
+  text: "Received the **AI Mini Integration Teaching Grant** ($1K) from Oakland University to integrate AI tools into undergraduate coursework."
 
 - date: "Aug 2025"
   sort: "2025-08-15"

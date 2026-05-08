@@ -38,7 +38,7 @@ links:
 
 # EDIT  Recruiting blurb shown on the home page (set show: false to hide)
 recruiting:
-  show: true
+  show: false
   text: >
     I am recruiting **PhD students** to start in **Winter / Fall 2026**
     with expertise in applied probability, optimization, machine-learning

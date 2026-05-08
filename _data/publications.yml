@@ -1,31 +1,46 @@
 # =============================================================
-#  Publications  —  newest first within each year
+#  Publications  -  newest first within each year
 # -------------------------------------------------------------
 #  Schema  (only `title`, `authors`, `venue`, `year` are required)
 #
 #    title:    "Paper Title"
-#    authors:  "Au1, <strong>Jie Hu</strong>, Au3"      # wrap your name in <strong>
+#    authors:  "Au1, <strong>Jie Hu</strong>, Au3"
 #    venue:    "Conference Name (ABBREV)"
 #    year:     2025
-#    location: "City, Country"                          # optional, shown after venue
-#    pdf:      "https://link/to.pdf"                    # optional
-#    arxiv:    "https://arxiv.org/abs/XXXX.XXXXX"       # optional
-#    code:     "https://github.com/..."                 # optional
-#    slides:   "/assets/files/slides.pdf"               # optional
-#    bibtex:   |                                        # optional, multi-line
+#    location: "City, Country"
+#    pdf:      "https://link/to.pdf"
+#    arxiv:    "https://arxiv.org/abs/XXXX.XXXXX"
+#    code:     "https://github.com/..."
+#    slides:   "/assets/files/slides.pdf"
+#    bibtex:   |
 #      @inproceedings{key, ...}
-#    abstract: >                                        # optional, expandable
-#      One-paragraph summary.
+#    abstract: >
+#      One-paragraph summary.  LaTeX math like $\alpha$ or $O(1/\alpha)$
+#      is rendered by MathJax on the live site.
 #    badges:
 #      - oral                              # green "Oral" badge
+#      - spotlight                         # purple "Spotlight" badge
 #      - award: "Outstanding Paper Award"  # yellow trophy badge
-#      - "Spotlight"                       # any free-text grey badge
-#    featured: true                        # show on homepage (pick your best 3)
+#    featured: true                        # show on homepage
 #
-#  Pro-tip:
-#    Run  `python tools/edit.py import-bib assets/files/publications.bib`
-#    to bulk-convert your BibTeX file into entries below.
+#  Pro-tip:  python tools/edit.py import-bib assets/files/publications.bib
 # =============================================================
+
+# ---------- 2026 ----------
+- title: "Score-Repellent Monte Carlo: Toward Efficient Non-Markovian Sampler with Constant Memory in General State Spaces"
+  authors: "<strong>Jie Hu</strong>"
+  venue: "International Conference on Machine Learning (ICML)"
+  year: 2026
+  pdf: "https://arxiv.org/pdf/2604.22948"
+  abstract: >
+    We propose a *score-repellent* Monte Carlo sampler that is non-Markovian yet
+    requires only $O(1)$ memory, generalizing self-repellent ideas from discrete
+    graphs to general state spaces. The sampler shapes its proposal distribution
+    using a running score estimate, achieving asymptotically minimal sampling
+    variance without storing the full history.
+  badges:
+    - spotlight
+  featured: true
 
 # ---------- 2025 ----------
 - title: "Beyond Self-Repellent Kernels: History-Driven Target Towards Efficient Nonlinear MCMC on General Graphs"
@@ -35,16 +50,18 @@
   location: "Vancouver, Canada"
   pdf: "https://arxiv.org/pdf/2505.18300"
   abstract: >
-    We propose a history-driven target (HDT) framework in MCMC to improve any
+    We propose a *history-driven target* (HDT) framework in MCMC to improve any
     random walk algorithm on discrete state spaces, such as general undirected
-    graphs, for efficient sampling from a target distribution. Recent innovations
-    like the self-repellent random walk (SRRW) achieve near-zero variance by
-    prioritizing under-sampled states through transition-kernel modifications,
-    but suffer high computational overhead and require time-reversibility. HDT
-    instead replaces the target distribution itself with a history-dependent one,
-    preserving lightweight implementation while achieving compatibility with both
-    reversible and non-reversible MCMC samplers and retaining unbiased samples
-    with near-zero variance.
+    graphs, for efficient sampling from a target distribution $\boldsymbol{\mu}$.
+    Recent innovations like the self-repellent random walk (SRRW) achieve
+    near-zero variance by prioritizing under-sampled states through
+    transition-kernel modifications, but suffer high computational overhead and
+    require time-reversibility. HDT instead introduces a history-dependent target
+    $\boldsymbol{\pi}[\mathbf{x}]$ to replace the original target
+    $\boldsymbol{\mu}$, where $\mathbf{x}$ is the empirical measure of past
+    visits. This preserves a lightweight implementation, achieves compatibility
+    with both reversible and non-reversible MCMC samplers, and retains unbiased
+    samples with near-zero variance.
   badges:
     - oral
   featured: true
@@ -57,14 +74,14 @@
   location: "Vancouver, Canada"
   pdf: "https://arxiv.org/pdf/2409.17499"
   abstract: >
-    We conduct an asymptotic analysis of Unified Distributed SGD (UD-SGD)
+    We conduct an asymptotic analysis of *Unified Distributed SGD* (UD-SGD)
     spanning decentralized SGD, local SGD, and Federated Learning patterns,
     and assess how different sampling strategies (i.i.d., shuffling, Markovian)
     affect convergence speed via the limiting covariance matrix. Our results
-    extend existing theories on linear speedup and asymptotic network independence,
-    and reveal that a few agents using highly efficient sampling can match or
-    surpass a majority using moderately improved strategies, providing new insights
-    beyond worst-agent analyses.
+    extend existing theories on linear speedup and asymptotic network
+    independence, and reveal that a few agents using highly efficient sampling
+    can match or surpass a majority using moderately improved strategies,
+    providing new insights beyond worst-agent analyses.
 
 - title: "Accelerating Distributed Stochastic Optimization via Self-Repellent Random Walks"
   authors: "<strong>Jie Hu</strong>, Vishwaraj Doshi, Do Young Eun"
@@ -73,12 +90,14 @@
   location: "Vienna, Austria"
   pdf: "https://arxiv.org/pdf/2401.09665"
   abstract: >
-    We replace the standard linear Markovian token in random-walk-based distributed
-    SGD by a Self-Repellent Random Walk (SRRW) - a nonlinear Markov chain that is
-    less likely to revisit recently visited states. Our SA-SRRW algorithm achieves
-    almost-sure convergence and a CLT, with asymptotic covariance always smaller
-    than that of an algorithm driven by the base Markov chain and decreasing at
-    rate O(1/alpha^2) - amplifying SRRW's benefit in the stochastic optimization context.
+    We replace the standard linear Markovian token in random-walk-based
+    distributed SGD by a *Self-Repellent Random Walk* (SRRW) -- a nonlinear
+    Markov chain parameterized by $\alpha > 0$ that is less likely to revisit
+    recently visited states. Our SA-SRRW algorithm achieves almost-sure
+    convergence and a CLT, with asymptotic covariance always smaller than that
+    of an algorithm driven by the base Markov chain and decreasing at rate
+    $O(1/\alpha^2)$ -- amplifying SRRW's benefit in the stochastic optimization
+    context.
   badges:
     - oral
   featured: true
@@ -90,12 +109,13 @@
   location: "Valencia, Spain"
   pdf: "https://arxiv.org/pdf/2401.09339"
   abstract: >
-    We conduct an in-depth asymptotic analysis of Two-Timescale Stochastic
-    Approximation (TTSA) under controlled Markovian noise via central limit
+    We conduct an in-depth asymptotic analysis of *Two-Timescale Stochastic
+    Approximation* (TTSA) under controlled Markovian noise via central limit
     theorem (CLT), uncovering coupled dynamics not addressed by previous CLTs
     that only handled martingale-difference noise. We extend efficient sampling
-    strategies from vanilla SGD to a wider TTSA context for distributed learning,
-    and apply the CLT to GTD algorithms with nonlinear function approximation.
+    strategies from vanilla SGD to a wider TTSA context for distributed
+    learning, and apply the CLT to gradient-based temporal-difference (GTD)
+    algorithms with nonlinear function approximation.
 
 # ---------- 2023 ----------
 - title: "Self-Repellent Random Walks on General Graphs - Achieving Minimal Sampling Variance via Nonlinear Markov Chains"
@@ -105,12 +125,13 @@
   location: "Honolulu, HI"
   pdf: "https://arxiv.org/pdf/2305.05097"
   abstract: >
-    We design a self-repellent random walk (SRRW) parameterized by alpha > 0 that is
-    less likely to transition to highly visited nodes. We prove almost-sure
-    convergence of the empirical distribution to the target stationary distribution,
-    and a CLT showing that stronger repellence (larger alpha) yields strictly smaller
-    asymptotic covariance in the Loewner order. For SRRW-driven MCMC, the decrease
-    in asymptotic sampling variance is O(1/alpha), eventually going to zero.
+    We design a *self-repellent random walk* (SRRW) parameterized by
+    $\alpha > 0$ that is less likely to transition to highly visited nodes.
+    We prove almost-sure convergence of the empirical distribution to the
+    target stationary distribution and a central limit theorem showing that
+    stronger repellence (larger $\alpha$) yields strictly smaller asymptotic
+    covariance in the Loewner order. For SRRW-driven MCMC, the decrease in
+    asymptotic sampling variance is $O(1/\alpha)$, eventually going to zero.
   badges:
     - award: "Outstanding Paper Award"
   featured: true
@@ -123,12 +144,12 @@
   location: "New Orleans, LA"
   pdf: "https://arxiv.org/pdf/2209.07446"
   abstract: >
-    We employ the notion of efficiency ordering - well-analyzed for MCMC samplers -
-    for SGD algorithms via Loewner ordering of asymptotic covariance matrices. We
-    show that input sequences more efficient for MCMC sampling lead to smaller
-    covariance for SGD in the limit, and demonstrate this for non-Markovian
-    processes whose mixing-time bounds are intractable. Empirically the ordering
-    extends to accelerated SGD and Adam.
+    We employ the notion of *efficiency ordering* -- well-analyzed for MCMC
+    samplers -- for SGD algorithms via Loewner ordering of asymptotic
+    covariance matrices. We show that input sequences more efficient for MCMC
+    sampling lead to smaller covariance for SGD in the limit, and demonstrate
+    this for non-Markovian processes whose mixing-time bounds are intractable.
+    Empirically the ordering extends to accelerated SGD and Adam.
 
 - title: "Bi-SIS Epidemics on Graphs: Quantitative Analysis of Coexistence Equilibria"
   authors: "Vishwaraj Doshi, <strong>Jie Hu</strong>, Do Young Eun"
@@ -137,11 +158,11 @@
   location: "Cancun, Mexico"
   pdf: "https://arxiv.org/pdf/2209.07304"
   abstract: >
-    We consider two SIS-type viruses competing over overlaid graphs and provide
-    the first quantitative analysis of non-trivial coexistence equilibria, proving
-    monotonicity in effective infection rates and giving upper bounds in terms of
-    spectral radii of the underlying graphs and positive equilibria of single-virus
-    systems.
+    We consider two SIS-type viruses competing over overlaid graphs and
+    provide the first quantitative analysis of non-trivial coexistence
+    equilibria, proving monotonicity in effective infection rates and giving
+    upper bounds in terms of spectral radii $\rho(\cdot)$ of the underlying
+    graphs and positive equilibria of single-virus systems.
 
 - title: "Minimizing File Transfer Time in Opportunistic Spectrum Access Model"
   authors: "<strong>Jie Hu</strong>, Vishwaraj Doshi, Do Young Eun"
@@ -149,11 +170,12 @@
   year: 2022
   pdf: "https://arxiv.org/pdf/2210.02557"
   abstract: >
-    We explicitly minimize file-transfer time over heterogeneous-rate Bernoulli
-    channels in the OSA model - showing that max-throughput policy does not
-    minimize file-transfer time in general. We give static and dynamic optimal
-    policies, an MIP reformulation that drastically cuts compute time, and a
-    heuristic with online implementation under unknown channel parameters.
+    We explicitly minimize file-transfer time over heterogeneous-rate
+    Bernoulli channels in the OSA model -- showing that max-throughput policy
+    does not minimize file-transfer time in general. We give static and
+    dynamic optimal policies, a mixed-integer programming reformulation that
+    drastically cuts compute time, and a heuristic with online implementation
+    under unknown channel parameters.
 
 # ---------- 2021 ----------
 - title: "Opportunistic Spectrum Access: Does Maximizing Throughput Minimize File Transfer Time?"
@@ -163,10 +185,11 @@
   location: "Philadelphia, PA"
   pdf: "https://arxiv.org/pdf/2109.11624"
   abstract: >
-    We show that maximizing long-term throughput in Opportunistic Spectrum Access
-    does not minimize file transfer time in general - especially for small files -
-    and provide static- and dynamic-optimal policies via stochastic shortest-path
-    formulation, with an online algorithm and regret bound.
+    We show that maximizing long-term throughput in Opportunistic Spectrum
+    Access does *not* minimize file transfer time in general -- especially
+    for small files -- and provide static- and dynamic-optimal policies via
+    stochastic shortest-path formulation, with an online algorithm whose
+    regret is bounded by $O(\sqrt{T \log T})$.
 
 # ---------- 2020 ----------
 - title: "Performance Analysis and Improvement on DSRC Application for V2V Communication"
@@ -177,8 +200,9 @@
   pdf: "https://arxiv.org/pdf/2102.07023"
   abstract: >
     We analyze packet-delivery ratio and mean delay of DSRC-based V2V
-    communication under IEEE 802.11p, and develop the Semi-persistent Contention
-    Density Control scheme that increases PDR by >10% and decreases mean delay
-    by >50% in heavy-load scenarios.
+    communication under IEEE 802.11p, and develop the *Semi-persistent
+    Contention Density Control* (SpCDC) scheme. Simulations show SpCDC
+    increases PDR by $>10\%$ and decreases mean delay by $>50\%$ in heavy-load
+    scenarios.
 
 # ---- Add new publications above this comment ----
