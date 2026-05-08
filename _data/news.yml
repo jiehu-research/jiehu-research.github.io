@@ -29,6 +29,10 @@
   sort: "2025-08-15"
   text: "Joined Oakland University as Assistant Professor in the Department of Computer Science and Engineering."
 
+- date: "Aug 2025"
+  sort: "2025-08-01"
+  text: "Completed my PhD at NC State University. Dissertation: *[Statistical Efficiency in Data Sampling: Enhancing Machine Learning and Distributed Optimization Beyond the Markovian Regime](https://www.lib.ncsu.edu/resolver/1840.20/45692)* (advisor: Dr. Do Young Eun)."
+
 - date: "Jul 2025"
   sort: "2025-07-14"
   text: "Attended **ICML 2025** in Vancouver and gave an *oral presentation* on our paper *History-Driven Target for Nonlinear MCMC*."

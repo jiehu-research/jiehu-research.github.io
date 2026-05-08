@@ -456,12 +456,19 @@ html.dark .theme-icon-dark  { display: inline; }
 
 .pub-abstract, .pub-bibtex {
   font-size: .9rem;
-  /* Collapsed: summary acts as a pill inline with the badges/links.
-     Open:     break onto a full-width row (flex-basis 100% inside .pub-badges). */
+  flex: 0 0 auto;            /* hug summary width, do NOT take full row */
+  align-self: flex-start;
+  margin: 0;
 }
 .pub-abstract[open], .pub-bibtex[open] {
-  flex-basis: 100%;
+  flex-basis: 100%;          /* once open, claim a fresh row for the body */
   margin-top: 6px;
+}
+/* Belt-and-suspenders: when closed, hide everything except the summary pill,
+   so the body never contributes to the flex-item's intrinsic size. */
+.pub-abstract:not([open]) > :not(summary),
+.pub-bibtex:not([open])   > :not(summary) {
+  display: none;
 }
 .pub-abstract summary, .pub-bibtex summary {
   cursor: pointer;
