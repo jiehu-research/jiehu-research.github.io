@@ -31,6 +31,7 @@
   authors: "<strong>Jie Hu</strong>, Lingyun Chen, Geeho Kim, Jinyoung Choi, Bohyung Han, Do Young Eun"
   venue: "International Conference on Machine Learning (ICML)"
   year: 2026
+  location: "Seoul, Korea"
   pdf: "https://arxiv.org/pdf/2604.22948"
   abstract: >
     We propose a *score-repellent* Monte Carlo sampler that is non-Markovian yet
