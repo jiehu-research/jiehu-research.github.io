@@ -20,6 +20,7 @@
     {% for badge in include.pub.badges %}
       {% if badge == "oral"      %}<span class="badge badge-oral">Oral</span>
       {% elsif badge == "spotlight" %}<span class="badge badge-spotlight">Spotlight</span>
+      {% elsif badge == "poster"    %}<span class="badge badge-poster">Poster</span>
       {% elsif badge.award       %}<span class="badge badge-award">🏆 {{ badge.award }}</span>
       {% else                    %}<span class="badge badge-default">{{ badge }}</span>
       {% endif %}
