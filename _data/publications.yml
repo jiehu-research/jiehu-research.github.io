@@ -20,6 +20,7 @@
 #    badges:
 #      - oral                              # green "Oral" badge
 #      - spotlight                         # purple "Spotlight" badge
+#      - poster                            # muted gray "Poster" badge
 #      - award: "Outstanding Paper Award"  # yellow trophy badge
 #    featured: true                        # show on homepage
 #
@@ -32,6 +33,8 @@
   venue: "Advances in Neural Information Processing Systems (NeurIPS)"
   year: 2026
   location: "Sydney, Australia"
+  badges:
+    - poster
   featured: true
 
 - title: "Score-Repellent Monte Carlo: Toward Efficient Non-Markovian Sampler with Constant Memory in General State Spaces"
