@@ -12,6 +12,10 @@
 #    prepends a properly-formatted entry.
 # =============================================================
 
+- date: "Sep 2026"
+  sort: "2026-09-24"
+  text: "Our paper *Geometry-Aware Score-Repellent Monte Carlo* was accepted at **NeurIPS 2026**!"
+
 - date: "Apr 2026"
   sort: "2026-04-15"
   text: "Our paper *Score-Repellent Monte Carlo: Toward Efficient Non-Markovian Sampler with Constant Memory in General State Spaces* was accepted at **ICML 2026** as a **Spotlight** (top 2.2% of 23,918 submissions)!"
