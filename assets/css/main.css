@@ -440,6 +440,7 @@ html.dark .theme-icon-dark  { display: inline; }
 .badge-oral      { background: var(--oral-bg);      color: var(--oral-text); }
 .badge-award     { background: var(--award-bg);     color: var(--award-text); }
 .badge-spotlight { background: var(--spotlight-bg); color: var(--spotlight-text); }
+.badge-poster    { background: var(--tag-bg);       color: var(--text-secondary); font-weight: 500; }
 .badge-default   { background: var(--tag-bg);       color: var(--tag-text); }
 
 .pub-link {
