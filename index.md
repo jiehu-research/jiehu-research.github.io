@@ -90,7 +90,7 @@ math: true
       </span>
     </div>
 
-    {% assign featured = site.data.publications | where: "featured", true | sort: "year" | reverse %}
+    {% assign featured = site.data.publications | where: "featured", true %}
     <ul class="pub-list">
       {% for pub in featured %}
         {% include publication.html pub=pub %}
