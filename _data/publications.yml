@@ -27,6 +27,13 @@
 # =============================================================
 
 # ---------- 2026 ----------
+- title: "Geometry-Aware Score-Repellent Monte Carlo"
+  authors: "<strong>Jie Hu</strong>, Lingyun Chen, Do Young Eun"
+  venue: "Advances in Neural Information Processing Systems (NeurIPS)"
+  year: 2026
+  location: "Sydney, Australia"
+  featured: true
+
 - title: "Score-Repellent Monte Carlo: Toward Efficient Non-Markovian Sampler with Constant Memory in General State Spaces"
   authors: "<strong>Jie Hu</strong>, Lingyun Chen, Geeho Kim, Jinyoung Choi, Bohyung Han, Do Young Eun"
   venue: "International Conference on Machine Learning (ICML)"
