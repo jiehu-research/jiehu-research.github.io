@@ -97,6 +97,26 @@ math: true
       {% endfor %}
     </ul>
 
+    <!-- Students -->
+    <div class="section-header">
+      <h2 class="section-title">Students</h2>
+      <span class="section-meta">
+        <a class="edit-link" href="{{ edit_base }}/_data/students.yml" target="_blank" rel="noopener" title="Edit students on GitHub">&#9998; edit</a>
+      </span>
+    </div>
+    {% assign students = site.data.students | sort: "name" %}
+    <ul class="student-list">
+      {% for student in students %}
+      <li class="student-item">
+        <span>
+          {% if student.url and student.url != "" %}<a class="student-name" href="{{ student.url }}" target="_blank" rel="noopener">{{ student.name }}</a>{% else %}<span class="student-name">{{ student.name }}</span>{% endif %}
+          <span class="student-degree">{{ student.degree }}</span>
+        </span>
+        <span class="student-term">Since {{ student.since }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+
     <!-- Teaching -->
     <div class="section-header">
       <h2 class="section-title">Teaching</h2>
