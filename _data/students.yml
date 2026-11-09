@@ -1,0 +1,27 @@
+# =============================================================
+#  Students  —  current advisees.  Shown on the homepage only.
+#  The homepage sorts them alphabetically by name (first name first).
+# -------------------------------------------------------------
+#  Schema:
+#    - name:   "First Last"
+#      degree: "PhD student"
+#      since:  "Fall 2026"   # term the student joined
+#      url:    ""            # optional personal page
+# =============================================================
+
+- name:   "Jingpei Zhong"
+  degree: "PhD student"
+  since:  "Fall 2026"
+  url:    ""
+
+- name:   "Shubham Jha"
+  degree: "PhD student"
+  since:  "Fall 2026"
+  url:    ""
+
+- name:   "Tasmin Karim"
+  degree: "PhD student"
+  since:  "Fall 2026"
+  url:    ""
+
+# ---- Add new students above ----
