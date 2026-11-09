@@ -557,6 +557,22 @@ html.dark .theme-icon-dark  { display: inline; }
 .teaching-course { font-weight: 500; }
 .teaching-term { color: var(--text-muted); font-size: .88rem; white-space: nowrap; }
 
+/* ---------- Students ---------- */
+.student-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.student-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: .96rem;
+}
+.student-item:last-child { border-bottom: 0; }
+.student-name { font-weight: 500; margin-right: 8px; }
+.student-degree { color: var(--text-secondary); font-size: .88rem; }
+.student-term { color: var(--text-muted); font-size: .88rem; white-space: nowrap; }
+
 /* ---------- Page Container (sub-pages) ---------- */
 .page-container { max-width: 760px; margin: 0 auto; }
 .page-title {
